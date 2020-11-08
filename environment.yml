@@ -1,0 +1,21 @@
+name: macro
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.7
+
+  - ipykernel=5.1.3
+  - jupyterlab=1.1.4
+  - nb_conda_kernels=2.2.2
+
+  - pandas=0.25.1
+  - numpy=1.19.1
+  - matplotlib
+  - seaborn
+  - numba
+
+  - black
+  - flake8
