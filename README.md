@@ -3,7 +3,13 @@
 [![Contributors][contributors-badge]][contributors-url]
 [![Black Code Style][black-badge]][black-url]
 
-## Preliminaries
+## Contents
+
+- [Software Requirements](#software-requirements)
+- [How to Contribute](#how-to-contribute)
+- [Problem Set 1](#problem-set-1)
+
+## Software Requirements
 
 If you want to run the notebooks on your local machine you need to install all packages
 that are listed in the file ``environment.yml``. This works easiest when using the
@@ -18,6 +24,15 @@ $ conda activate macro
 
 Now you should be able to start and execute the notebooks from inside the terminal
 session.
+
+## How to Contribute
+
+You can contribute to this repository by uploading alternative solutions, corrected
+mistakes or solutions to new exercises. Feel free to do so using the pull request
+strategy. That is, after cloning the repository you create a feature branch and then on
+the repository webpage you create a pull request for that feature branch. Once you are
+happy with your solution you ask for a code review and we will then merge the feature
+branch onto main. For any questions on this process contact [timmens](https://github.com/timmens).
 
 ## Problem Set 1
 
