@@ -3,6 +3,22 @@
 [![Contributors][contributors-badge]][contributors-url]
 [![Black Code Style][black-badge]][black-url]
 
+## Preliminaries
+
+If you want to run the notebooks on your local machine you need to install all packages
+that are listed in the file ``environment.yml``. This works easiest when using the
+[conda package manager](https://docs.conda.io/en/latest/) (or [mamba](https://github.com/mamba-org/mamba)
+if you know what you're doing). Assuming you installed conda you simply open your
+favorite terminal emulator and run (line by line)
+
+```zsh
+$ conda env create -f environment.yml
+$ conda activate macro
+```
+
+Now you should be able to start and execute the notebooks from inside the terminal
+session.
+
 ## Problem Set 1
 
 <a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb"
