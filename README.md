@@ -2,6 +2,7 @@
 
 [![Contributors][contributors-badge]][contributors-url]
 [![Black Code Style][black-badge]][black-url]
+![CI](https://github.com/timmens/macro_problems/workflows/CI/badge.svg)
 
 ## Contents
 
