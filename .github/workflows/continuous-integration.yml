@@ -1,0 +1,39 @@
+# Continuous Integration
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # checks-out macro_problems repository
+      - uses: actions/checkout@v2
+      
+      # install miniconda and environment
+      - uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: false
+          activate-environment: macro
+          environment-file: environment.yml
+          python-version: 3.7
+
+      - name: run-notebooks
+        run: |
+         for f in *.ipynb; do echo "$f"; done
+         for f in *.ipynb; do jupyter nbconvert --to notebook --execute "$f"; done
+      
+      - name: Run Python Scripts
+        run: | 
+         for f in *.py; do echo "$f"; done
+         for f in *.py; do python "$f"; done
+          
