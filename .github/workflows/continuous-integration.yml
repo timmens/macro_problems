@@ -27,10 +27,10 @@ jobs:
           environment-file: environment.yml
           python-version: 3.7
 
-          # - name: Run Notebooks
-          #   run: |
-          #     for f in *.ipynb; echo "$f"; done
-          #     for f in *.ipynb; jupyter nbconvert --to notebook --execute "$f"; done
+          - name: run-notebooks
+            run: |
+              for f in *.ipynb; echo "$f"; done
+              # for f in *.ipynb; jupyter nbconvert --to notebook --execute "$f"; done
           #     
           # - name: Run Python Scripts
           #   run: | 
