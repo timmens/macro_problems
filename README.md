@@ -57,5 +57,5 @@ note that building the notebook can take a while (up to 5 minutes or so).
 [contributors-url]: https://github.com/timmens/macro_problems/graphs/contributors
 [black-badge]:https://img.shields.io/badge/code%20style-black-000000.svg
 [black-url]:https://github.com/psf/black
-[ci-badge]: https://github.com/timmens/macro_problems/actions?query=workflow%3ACI
+[ci-badge]: https://github.com/timmens/macro_problems/workflows/CI/badge.svg
 [ci-url]: https://github.com/timmens/macro_problems/actions?query=workflow%3ACI

@@ -27,11 +27,13 @@ jobs:
           activate-environment: macro
 
       - name: Run Notebooks
+        shell: bash -l {0}
         run: |
           for f in *.ipynb; do echo "$f"; done
           for f in *.ipynb; do jupyter nbconvert --to notebook --execute "$f"; done
       
       - name: Run Python Scripts
+        shell: bash -l {0}
         run: | 
          for f in *.py; do echo "$f"; done
          for f in *.py; do python "$f"; done
