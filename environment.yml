@@ -14,9 +14,10 @@ dependencies:
 
   - pandas
   - numpy
+  - scikit-learn
+  - numba
   - matplotlib
   - seaborn
-  - numba
 
   - black
   - flake8
