@@ -44,25 +44,35 @@ these notebooks simply press the ``render notebook`` button. If you like to play
 with these notebooks online simply press the ``launch binder`` button (note that the
 building process can take a few minutes).
 
+```diff
+- NBViewer has some problems with refreshing their cache at the moment.
+- Therefore you can only see the most recent version when viewing the notebook
+- via github directly.
+```
+
 ### Problem Set 1
 
+<!---
 <a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb"
    target="_parent">
    <img align="center" 
   src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
       width="109" height="20">
 </a>
+-->
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb)
 
 ### Problem Set 2
 
+<!---
 <a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb"
    target="_parent">
    <img align="center" 
   src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
       width="109" height="20">
 </a>
+-->
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps2.ipynb)
 
