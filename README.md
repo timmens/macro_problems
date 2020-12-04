@@ -11,6 +11,7 @@
 - [Solutions](#solutions)
 - [Problem Set 1](#problem-set-1)
 - [Problem Set 2](#problem-set-2)
+- [Problem Set 3](#problem-set-3)
 
 ## Software Requirements
 
@@ -73,6 +74,18 @@ building process can take a few minutes).
 </a>
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps2.ipynb)
+
+
+### Problem Set 3
+
+<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb"
+   target="_parent">
+   <img align="center" 
+  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
+      width="109" height="20">
+</a>
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps3.ipynb)
 
 
 [contributors-badge]: https://img.shields.io/github/contributors/timmens/macro_problems
