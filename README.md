@@ -12,6 +12,7 @@
 - [Problem Set 1](#problem-set-1)
 - [Problem Set 2](#problem-set-2)
 - [Problem Set 3](#problem-set-3)
+- [Problem Set 4](#problem-set-4)
 
 ## Software Requirements
 
@@ -55,7 +56,7 @@ building process can take a few minutes).
 
 ### Problem Set 1
 
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb"
+<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=True"
    target="_parent">
    <img align="center" 
   src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
@@ -66,7 +67,7 @@ building process can take a few minutes).
 
 ### Problem Set 2
 
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb"
+<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb?flush_cache=True"
    target="_parent">
    <img align="center" 
   src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
@@ -78,7 +79,7 @@ building process can take a few minutes).
 
 ### Problem Set 3
 
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb"
+<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb?flush_cache=True"
    target="_parent">
    <img align="center" 
   src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
@@ -87,6 +88,16 @@ building process can take a few minutes).
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps3.ipynb)
 
+### Problem Set 4
+
+<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps4.ipynb?flush_cache=True"
+   target="_parent">
+   <img align="center" 
+  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
+      width="109" height="20">
+</a>
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps4.ipynb)
 
 [contributors-badge]: https://img.shields.io/github/contributors/timmens/macro_problems
 [contributors-url]: https://github.com/timmens/macro_problems/graphs/contributors

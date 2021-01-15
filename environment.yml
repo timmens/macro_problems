@@ -15,6 +15,7 @@ dependencies:
   - pandas
   - xlrd
   - numpy
+  - scipy
   - scikit-learn
   - numba
   - matplotlib
