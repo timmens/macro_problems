@@ -9,10 +9,6 @@
 - [Software Requirements](#software-requirements)
 - [How to Contribute](#how-to-contribute)
 - [Solutions](#solutions)
-- [Problem Set 1](#problem-set-1)
-- [Problem Set 2](#problem-set-2)
-- [Problem Set 3](#problem-set-3)
-- [Problem Set 4](#problem-set-4)
 
 ## Software Requirements
 
@@ -44,7 +40,8 @@ branch onto main. For any questions on this process contact [timmens](https://gi
 Solutions to the computation exercises are found in the following notebooks. To view
 these notebooks simply press the ``render notebook`` button. If you like to play around
 with these notebooks online simply press the ``launch binder`` button (note that the
-building process can take a few minutes).
+building process can take a few minutes). (*In case one of the links fails you can also
+view the notebook by simply opening the file; that will always work.*)
 
 <!---
 ```diff
