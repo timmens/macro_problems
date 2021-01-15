@@ -54,51 +54,15 @@ building process can take a few minutes).
 ```
 -->
 
-### Problem Set 1
+| Problem Set | binder | nbviewer |
+| ------------------| -- | -- |
+| 1 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb?flush_cache=True )
+| 2 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps2.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb?flush_cache=True )
+| 3 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps3.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps4.ipynb?flush_cache=True )
+| 4 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps4.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=True )
 
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=True"
-   target="_parent">
-   <img align="center" 
-  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
-      width="109" height="20">
-</a>
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb)
-
-### Problem Set 2
-
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb?flush_cache=True"
-   target="_parent">
-   <img align="center" 
-  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
-      width="109" height="20">
-</a>
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps2.ipynb)
-
-
-### Problem Set 3
-
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb?flush_cache=True"
-   target="_parent">
-   <img align="center" 
-  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
-      width="109" height="20">
-</a>
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps3.ipynb)
-
-### Problem Set 4
-
-<a href="https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps4.ipynb?flush_cache=True"
-   target="_parent">
-   <img align="center" 
-  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png" 
-      width="109" height="20">
-</a>
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps4.ipynb)
-
+[nbviewer-badge]:https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png
+[binder-badge]:https://mybinder.org/badge_logo.svg
 [contributors-badge]: https://img.shields.io/github/contributors/timmens/macro_problems
 [contributors-url]: https://github.com/timmens/macro_problems/graphs/contributors
 [black-badge]:https://img.shields.io/badge/code%20style-black-000000.svg
