@@ -6,11 +6,35 @@
 
 ## Contents
 
-- [Software Requirements](#software-requirements)
-- [How to Contribute](#how-to-contribute)
 - [Solutions](#solutions)
+- [How to Contribute](#how-to-contribute)
+- [Run Notebooks Locally](#run-notebooks-locally)
 
-## Software Requirements
+## Solutions
+
+Solutions to the computation exercises are found in the following notebooks. To view
+these notebooks simply press the ``render notebook`` button. If you like to play around
+with these notebooks online simply press the ``launch binder`` button (note that the
+building process can take a few minutes). (*In case one of the links fails you can also
+view the notebook by simply opening the file; that will always work.*)
+
+| Problem Set | binder | nbviewer |
+| ------------------| -- | -- |
+| 1 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=True )
+| 2 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps2.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb?flush_cache=True )
+| 3 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps3.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb?flush_cache=True )
+| 4 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps4.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps4.ipynb?flush_cache=True )
+
+## How to Contribute
+
+You can contribute to this repository by uploading alternative solutions, corrected
+mistakes or solutions to new exercises. Feel free to do so using the pull request
+strategy. That is, after cloning the repository you create a feature branch and then on
+the repository webpage you create a pull request for that feature branch. Once you are
+happy with your solution you ask for a code review and we will then merge the feature
+branch onto main. For any questions on this process contact [timmens](https://github.com/timmens).
+
+## Run Notebooks Locally
 
 If you want to run the notebooks on your local machine you need to install all packages
 that are listed in the file ``environment.yml``. This works easiest when using the
@@ -25,38 +49,6 @@ $ conda activate macro
 
 Now you should be able to start and execute the notebooks from inside the terminal
 session.
-
-## How to Contribute
-
-You can contribute to this repository by uploading alternative solutions, corrected
-mistakes or solutions to new exercises. Feel free to do so using the pull request
-strategy. That is, after cloning the repository you create a feature branch and then on
-the repository webpage you create a pull request for that feature branch. Once you are
-happy with your solution you ask for a code review and we will then merge the feature
-branch onto main. For any questions on this process contact [timmens](https://github.com/timmens).
-
-## Solutions
-
-Solutions to the computation exercises are found in the following notebooks. To view
-these notebooks simply press the ``render notebook`` button. If you like to play around
-with these notebooks online simply press the ``launch binder`` button (note that the
-building process can take a few minutes). (*In case one of the links fails you can also
-view the notebook by simply opening the file; that will always work.*)
-
-<!---
-```diff
-- NBViewer has some problems with refreshing their cache at the moment.
-- Therefore you can only see the most recent version when viewing the notebook
-- via github directly.
-```
--->
-
-| Problem Set | binder | nbviewer |
-| ------------------| -- | -- |
-| 1 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=True )
-| 2 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps2.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps2.ipynb?flush_cache=True )
-| 3 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps3.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps3.ipynb?flush_cache=True )
-| 4 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps4.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps4.ipynb?flush_cache=True )
 
 [nbviewer-badge]:https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png
 [binder-badge]:https://mybinder.org/badge_logo.svg
