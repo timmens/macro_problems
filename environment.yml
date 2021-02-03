@@ -14,7 +14,7 @@ dependencies:
 
   - pandas
   - xlrd
-  - numpy
+  - numpy=1.19.1
   - scipy
   - scikit-learn
   - numba
