@@ -30,10 +30,4 @@ jobs:
         shell: bash -l {0}
         run: |
           for f in *.ipynb; do echo "$f"; done
-          for f in *.ipynb; do if [ $f != ps3.ipynb ]; then jupyter nbconvert --to notebook --execute "$f"; fi; done
-      
-      - name: Run Python Scripts
-        shell: bash -l {0}
-        run: | 
-         for f in *.py; do echo "$f"; done
-         for f in *.py; do python "$f"; done
+          for f in *.ipynb; do if [ $f != ps1.ipynb ]; then jupyter nbconvert --to notebook --execute "$f"; fi; done
