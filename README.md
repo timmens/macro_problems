@@ -1,4 +1,4 @@
-# Macro Problem Sets Solutions
+# Macro Problem Sets SolutionsPlease
 
 [![Contributors][contributors-badge]][contributors-url]
 [![Black Code Style][black-badge]][black-url]
@@ -12,7 +12,7 @@
 
 ## Solutions
 
-> Please find solutions to exercises from the winter semester in the folder ``ws``.
+> You can find solutions to exercises from the winter semester in the folder ``ws``.
 > Exercises from the summer semester will be reachable here directly.
 
 Solutions to the computation exercises are found in the following notebooks. To view
