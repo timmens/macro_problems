@@ -14,9 +14,10 @@ dependencies:
 
   - pandas
   - xlrd
-  - numpy=1.19.1
+  - numpy
   - scipy
   - scikit-learn
+  - statsmodels
   - numba
   - matplotlib
   - seaborn

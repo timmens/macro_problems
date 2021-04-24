@@ -23,7 +23,7 @@ view the notebook by simply opening the file; that will always work.*)
 
 | Problem Set | binder | nbviewer |
 | ------------------| -- | -- |
-| 1 |  |  |
+| 1 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=True )
 
 ## How to Contribute
 
