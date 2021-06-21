@@ -30,4 +30,4 @@ jobs:
         shell: bash -l {0}
         run: |
           for f in *.ipynb; do echo "$f"; done
-          for f in *.ipynb; do if [ $f != ps1.ipynb ]; then jupyter nbconvert --to notebook --execute "$f"; fi; done
+          # for f in *.ipynb; do if [ $f != ps1.ipynb ]; then jupyter nbconvert --to notebook --execute "$f"; fi; done

@@ -3,6 +3,7 @@ name: macro
 channels:
   - defaults
   - conda-forge
+  - opensourceeconomics
 
 dependencies:
   - python=3.7
@@ -21,6 +22,7 @@ dependencies:
   - numba
   - matplotlib
   - seaborn
+  - estimagic
 
   - black
   - flake8
