@@ -25,6 +25,7 @@ view the notebook by simply opening the file; that will always work.*)
 | ------------------| -- | -- |
 | Bayer 1 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=ps1.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/ps1.ipynb?flush_cache=False )
 | Schularick 1 | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=assignment1.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/assignment1.ipynb?flush_cache=False )
+| Schularick - Natural Experiments | [![Binder][binder-badge]](https://mybinder.org/v2/gh/timmens/macro_problems/main?filepath=assignment1_natural_experiments.ipynb) |  [<img src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"  width="109" height="20">](https://nbviewer.jupyter.org/github/timmens/macro_problems/blob/main/assignment1_natural_experiments.ipynb?flush_cache=False )
 
 ## How to Contribute
 
