@@ -23,6 +23,7 @@ dependencies:
   - matplotlib
   - seaborn
   - estimagic
+  - keras
 
   - black
   - flake8
