@@ -3,3 +3,4 @@ data/
 clean_data.csv
 .Rproj.user
 pdf/
+__pycache__/
