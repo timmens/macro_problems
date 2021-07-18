@@ -1,20 +1,19 @@
 """This module contains auxiliary code for the third assignment."""
-import warnings
-import patsy
-import pandas as pd
-import numpy as np
+import warnings  # noqa: F401
+
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import patsy
 import seaborn as sns
-
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import plot_roc_curve as sklearn_plot_roc_curve
-from sklearn.metrics import roc_auc_score
-
-from statsmodels.discrete.discrete_model import Logit
-
+from catboost import CatBoostClassifier
 from keras import Sequential
 from keras.layers import Dense
 from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import plot_roc_curve as sklearn_plot_roc_curve
+from sklearn.metrics import roc_auc_score
+from statsmodels.discrete.discrete_model import Logit
 
 sns.set_style("whitegrid")
 
@@ -47,7 +46,7 @@ def compute_aggregate_credit_and_money(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def plot_aggregate_credit_and_money(df_agg: pd.DataFrame) -> None:
-    """Plots time-series of aggregate credit and money."""
+    """Plot time-series of aggregate credit and money."""
     fig, ax = plt.subplots()
     fig.set_size_inches(14, 7)
 
@@ -65,16 +64,19 @@ def plot_aggregate_credit_and_money(df_agg: pd.DataFrame) -> None:
 
 
 def create_formula_with_lags(var_name: str, n_lags: int) -> str:
-    """Creates formula str of var_name with n_lags."""
+    """Create formula str of var_name with n_lags."""
     covariates = [f"{var_name}.shift({i})" for i in range(1, n_lags + 1)]
     formula = " + ".join(covariates)
     return formula
 
 
 def extract_info_from_statsmodels_fit(model, df):
+    """Extract info from statsmoels fit."""
     # test for joint signifance
     select_relevant_params = model.params.index.str.startswith("diff_log_real_credit")
-    r_matrix = np.eye(len(select_relevant_params))[-select_relevant_params.sum() :]
+    r_matrix = np.eye(len(select_relevant_params))[
+        -select_relevant_params.sum() :
+    ]  # noqa E203
     f_test_pvalue = float(model.f_test(r_matrix).pvalue)
 
     # info on diff_log_real_credit estimates
@@ -110,7 +112,7 @@ def extract_info_from_statsmodels_fit(model, df):
 
 
 def plot_roc_curve(model, X_train, y_train, X_test, y_test, title=None, ax=None):
-    """Plots ROC curve."""
+    """Plot ROC curve."""
     if ax is None:
         fig, ax = plt.subplots()
         fig.set_size_inches(14, 7)
@@ -137,20 +139,21 @@ def plot_roc_curve(model, X_train, y_train, X_test, y_test, title=None, ax=None)
 
 def create_model_data(formula, df, with_predictors=None):
     """Create model data from data frame.
-    
-    Given a patsy-style formula (similar to an R-formula), a data frame and possibly a list of
-    further predictors, create the design matrix X and the outcome vector y.
-    
+
+    Given a patsy-style formula (similar to an R-formula), a data frame and possibly a
+    list of further predictors, create the design matrix X and the outcome vector y.
+
     Args:
         formula (str): patsy style formula object.
         df (pandas.DataFrame): The data set.
-        with_predictors (Union[str, List[str]]): Additional predictors to consider. Default None.
-        
+        with_predictors (Union[str, List[str]]): Additional predictors to consider.
+            Default None.
+
     Returns:
         Tuple[pd.Series, pd.DataFrame]:
             y: The outcome series.
             X: The design matrix.
-    
+
     """
     df = df.copy().reset_index()
 
@@ -161,13 +164,14 @@ def create_model_data(formula, df, with_predictors=None):
     if len(with_predictors) > 0:
         formula += " + " + " + ".join(with_predictors)
 
-    y, X = patsy.dmatrices(formula, df, return_type="dataframe")
+    y, X = patsy.dmatrices(formula, df, return_type="dataframe")  # noqa: N803
     y = y["crisisJST"]
 
     return y, X
 
 
 def create_test_train_data(df, formula, with_predictors=None):
+    """Create test and train data from formula."""
     df_train = df.query("year <= 1994")
     df_test = df.query("year > 1994")
 
@@ -178,7 +182,16 @@ def create_test_train_data(df, formula, with_predictors=None):
     return data
 
 
-def fit_logit(y_train=None, X_train=None, data=None, backend="sklearn", max_iter=250):
+def fit_logit(
+    y_train=None,
+    X_train=None,
+    data=None,
+    backend="sklearn",
+    max_iter=250,
+    penalty="none",
+    solver="lbfgs",
+):
+    """Fit logistic regression model."""
     if data is not None:
         y_train = data["y_train"]
         X_train = data["X_train"]
@@ -187,7 +200,7 @@ def fit_logit(y_train=None, X_train=None, data=None, backend="sklearn", max_iter
         model = Logit(y_train, X_train).fit(disp=False)
     elif backend == "sklearn":
         model = LogisticRegression(
-            fit_intercept=False, penalty="l2", max_iter=max_iter
+            fit_intercept=False, penalty=penalty, max_iter=max_iter, solver=solver
         ).fit(X_train, y_train)
     else:
         raise ValueError("'backend' must be eiter sklearn or statsmodels.")
@@ -196,7 +209,7 @@ def fit_logit(y_train=None, X_train=None, data=None, backend="sklearn", max_iter
 
 
 def plot_predictor_comparison(fit_func, df, formula, **kwargs):
-
+    """Plot predictor comparison."""
     fig, axes = plt.subplots(2, 2)
     fig.set_size_inches(24, 14)
 
@@ -211,7 +224,7 @@ def plot_predictor_comparison(fit_func, df, formula, **kwargs):
         if var == "Baseline":
             with_predictors = None
         else:
-            with_predictors = [f"{var}.shift({l})" for l in range(1, 7)]
+            with_predictors = [f"{var}.shift({lag})" for lag in range(1, 6)]
         data = create_test_train_data(df, formula, with_predictors)
         model = fit_func(data=data, **kwargs)
         plot_roc_curve(model, **data, title=mapper[var], ax=ax)
@@ -221,20 +234,20 @@ def plot_predictor_comparison(fit_func, df, formula, **kwargs):
 
 def _get_build_model_func(input_dim, layers):
     """Create a function to build a neural network model.
-    
+
     The ``build_model`` function is needed by the Keras model to build the neural
     network. Here we create this function dynamically.
-    Example for layers. ``layers = "54-81-54"`` means that the first hidden layer has
+    Exa6ple for layers. ``layers = "54-81-54"`` means that the first hidden layer has
     54 nodes, the second hidden layer has 81 nodes, the third hidden layer has again 54
     nodes and implicitly the output layer has one node.
-    
+
     Args:
         input_dim (int): Number of features.
         layers (str): String describing the number of nodes per hidden layer.
-        
+
     Returns:
         build_model (function): Function to build a neural net model.
-        
+
     """
     layers = [int(n) for n in layers.split("-")]
 
@@ -254,17 +267,16 @@ def fit_neural_network(
     y_train=None, X_train=None, data=None, layers=None, n_epochs=100, n_batch_size=20
 ):
     """Fit a neural network regressor.
-    
+
     Args:
-        ....
         layers (str): str specifying the number of hidden layers and hidden nodes in the
             neural network. Example: "100-100-100".
         n_epochs (int): Number of epochs used for model fitting.
         n_batch_size (int): Batch size used for model fitting.
-        
+
     Returns:
         nnet: The fitted neural network.
-            
+
     """
     if data is not None:
         y_train = data["y_train"]
@@ -278,3 +290,41 @@ def fit_neural_network(
     nnet._estimator_type = "classifier"
     nnet.fit(X_train, y_train, verbose=False)
     return nnet
+
+
+def fit_catboost(
+    X_train=None,
+    y_train=None,
+    data=None,
+    iterations=1_000,
+    learning_rate=0.05,
+    depth=8,
+    loss_function="MAE",
+):
+    """Fit a boosted tree using catboost.
+
+    Args:
+        X_train (pd.DataFrame): Data on features.
+        y_train (pd.Series or np.ndarray): Data on outcomes.
+        data: Default None.
+        iterations (int): Number of models to build.
+        learning_rate (float): Learning rate for updating step.
+        depth (int): Depth of single model. Represent depth of oblivious trees.
+        loss_function (str): Loss function over which the model is optimized.
+
+    Returns:
+        Classifier...
+
+    """
+    if data is not None:
+        y_train = data["y_train"]
+        X_train = data["X_train"]
+
+    model = CatBoostClassifier(
+        iterations=iterations,
+        learning_rate=learning_rate,
+        depth=depth,
+        loss_function=loss_function,
+    )
+    model.fit(X_train, y_train, verbose=False)
+    return model

@@ -24,6 +24,7 @@ dependencies:
   - seaborn
   - estimagic
   - keras
+  - catboost
 
   - black
   - flake8

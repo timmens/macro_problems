@@ -4,3 +4,4 @@ clean_data.csv
 .Rproj.user
 pdf/
 __pycache__/
+catboost_info/
