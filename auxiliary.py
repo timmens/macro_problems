@@ -1,5 +1,6 @@
 """This module contains auxiliary code for the third assignment."""
 import warnings  # noqa: F401
+from copy import deepcopy
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -182,15 +183,7 @@ def create_test_train_data(df, formula, with_predictors=None):
     return data
 
 
-def fit_logit(
-    y_train=None,
-    X_train=None,
-    data=None,
-    backend="sklearn",
-    max_iter=250,
-    penalty="none",
-    solver="lbfgs",
-):
+def fit_logit(y_train=None, X_train=None, data=None, backend="sklearn", **kwargs):
     """Fit logistic regression model."""
     if data is not None:
         y_train = data["y_train"]
@@ -199,13 +192,28 @@ def fit_logit(
     if backend == "statsmodels":
         model = Logit(y_train, X_train).fit(disp=False)
     elif backend == "sklearn":
-        model = LogisticRegression(
-            fit_intercept=False, penalty=penalty, max_iter=max_iter, solver=solver
-        ).fit(X_train, y_train)
+        model = LogisticRegression(fit_intercept=False, **kwargs).fit(X_train, y_train)
     else:
         raise ValueError("'backend' must be eiter sklearn or statsmodels.")
 
     return model
+
+
+def fit_post_logit(first_stage_model, y_train=None, X_train=None, data=None, **kwargs):
+    """Fit post logistic regression model after 1st stage l1 regularization."""
+    if data is not None:
+        y_train = data["y_train"]
+        X_train = data["X_train"]
+
+    coef = first_stage_model.coef_
+    col_idx_to_drop = np.where(coef == 0)[1]
+    col_to_drop = X_train.columns[col_idx_to_drop]
+
+    X_train = X_train.drop(columns=col_to_drop)
+
+    model = LogisticRegression(fit_intercept=False, **kwargs).fit(X_train, y_train)
+
+    return model, col_to_drop
 
 
 def plot_predictor_comparison(fit_func, df, formula, **kwargs):
@@ -230,6 +238,14 @@ def plot_predictor_comparison(fit_func, df, formula, **kwargs):
         plot_roc_curve(model, **data, title=mapper[var], ax=ax)
 
     return None
+
+
+def drop_columns_data(data, cols_to_drop):
+    """Drop columns from feature data frame."""
+    data = deepcopy(data)
+    data["X_train"] = data["X_train"].drop(columns=cols_to_drop)
+    data["X_test"] = data["X_test"].drop(columns=cols_to_drop)
+    return data
 
 
 def _get_build_model_func(input_dim, layers):
